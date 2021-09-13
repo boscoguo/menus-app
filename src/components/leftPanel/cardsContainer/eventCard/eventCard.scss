@@ -1,0 +1,28 @@
+.event-card {
+    display: flex;
+    justify-content:  space-between;
+    align-items: center;
+    border-top: 1px solid #768692; 
+    padding:8px 15px;
+    &__left {
+        flex: 1 0 auto;
+        max-width: 40%;
+        &-title {
+            color: #768692;
+        }
+        .title-active {
+            color: #ffffff;
+        }
+    }
+    &__middle, &__right {
+        flex: 1 0 auto;
+        max-width: 30%;
+        text-align: center;
+    }
+    &__middle {
+        color: #b7c9d3;
+    }
+    &__right {
+        text-align: right;
+    }
+}

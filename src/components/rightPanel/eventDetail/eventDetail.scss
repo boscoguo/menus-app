@@ -1,0 +1,11 @@
+.detail {
+    display: flex;
+    justify-content: space-around;
+    &__left {
+        max-width: 50%;
+        margin-right: 50px;
+    }
+    &__right {
+        max-width: 40%;
+    }
+}
