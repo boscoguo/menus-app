@@ -5,8 +5,8 @@ import React, { useEffect, useState, useRef } from "react";
 // import { setMovieId, getEventDetails } from "../../../action/eventsAction";
 // import { Link } from "react-router-dom";
 import { Menu } from 'antd';
-import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
-import { getRootListKey } from "../../../utils/menuListUtils";
+import SingleItem from "./singleItem/singleItem";
+import { getRootListKey, getRootListValue } from "../../../utils/menuListUtils";
 import "./cardsContainer.scss";
 
 const { SubMenu } = Menu;
@@ -20,7 +20,9 @@ interface cardsContainerProps {
 const CardsContainer = ({ data }: cardsContainerProps) => {
   // console.log("data", data);
   // console.log("test result", getRootListKey(data));
-  const menuLists = getRootListKey(data)
+  const menuRootListsKey = getRootListKey(data);
+  const menuRootListsValue = getRootListValue(data);
+  console.log("menuListsValue", menuRootListsValue);
   // const eventsState = useSelector(
   //   (state: RootStore) => state.events.event?.data._embedded.events
   // )
@@ -58,7 +60,7 @@ const CardsContainer = ({ data }: cardsContainerProps) => {
 
   const onOpenChange = (keys: any[]) => {
     const latestOpenKey = keys.find(key => openKeys.indexOf(key) === -1);
-    if (menuLists.indexOf(latestOpenKey) === -1) {
+    if (menuRootListsKey.indexOf(latestOpenKey) === -1) {
       setOpenKeys(keys);
     } else {
       setOpenKeys(latestOpenKey ? [latestOpenKey] : []);
@@ -68,7 +70,13 @@ const CardsContainer = ({ data }: cardsContainerProps) => {
   return (
     <div className="cards">
       <Menu mode="inline" openKeys={openKeys} onOpenChange={onOpenChange} style={{ width: "100%" }}>
-        <SubMenu key="login" icon={<MailOutlined />} title="Navigation One">
+        {menuRootListsKey.map((menu: string, index: number) => {
+          // {console.log("test", menuRootListsValue[index])}
+          return <SubMenu key={menu} title={menu}>
+            <SingleItem singleItemData={menuRootListsValue[index]}/>
+          </SubMenu>
+        })}
+        {/* <SubMenu key="login" icon={<MailOutlined />} title="Navigation One">
           <Menu.Item key="1">login</Menu.Item>
         </SubMenu>
         <SubMenu key="test1" icon={<AppstoreOutlined />} title="Navigation Two">
@@ -96,7 +104,7 @@ const CardsContainer = ({ data }: cardsContainerProps) => {
           <Menu.Item key="18">Option 18</Menu.Item>
           <Menu.Item key="19">Option 19</Menu.Item>
           <Menu.Item key="20">Option 20</Menu.Item>
-        </SubMenu>
+        </SubMenu> */}
 
       </Menu>
 

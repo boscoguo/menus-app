@@ -1,8 +1,36 @@
-{
-    "login": [],
-    "test1": [],
-    "test2": [],
-    "test3": [],
-    "test4": [],
-    "test5": []
-}
+[
+    {
+        "title": "parent 1",
+        "key": "0-0",
+        "children": [
+            {
+                "title": "login",
+                "key": "0-0-0"
+            },
+            {
+                "title": "son 1",
+                "key": "0-0-1", 
+                "children": [
+                    {"title": "test 1", "key": "0-0-0-0"}
+                ]
+            }
+        ]
+    }, 
+    {
+        "title": "parent 2",
+        "key": "1-0",
+        "children": [
+            {
+                "title": "tes 2",
+                "key": "1-0-0"
+            },
+            {
+                "title": "son2",
+                "key": "1-0-1", 
+                "children": [
+                    {"title": "leaf", "key": "1-0-0-0"}
+                ]
+            }
+        ]
+    }
+]

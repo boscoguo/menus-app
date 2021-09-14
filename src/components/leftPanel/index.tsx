@@ -4,6 +4,7 @@ import { getEvent } from "../../action/eventsAction";
 import CardsContainer from "./cardsContainer";
 import data from "../../data/menuLists.json";
 import BottomPart from "./bottomPart";
+import Menu from "./menu";
 import "./leftPanel.scss";
 
 const LeftPanel = () => {
@@ -15,8 +16,9 @@ const LeftPanel = () => {
   
   return (
     <div className="left">
-      <CardsContainer data={data} />
+      {/* <CardsContainer data={data} /> */}
       {/* <BottomPart /> */}
+      <Menu data={data}/>
     </div>
   );
 };
