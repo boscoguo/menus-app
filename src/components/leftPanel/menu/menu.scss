@@ -1,0 +1,21 @@
+.menu {
+    .ant-tree .ant-tree-node-content-wrapper.ant-tree-node-selected {
+        background-color: #fff;
+    }
+    &__btn {
+        margin-bottom: 0;
+        border: none; 
+        border-radius: 2px; 
+        padding: "3px 10px";
+        color: #fff;
+        font-weight: 400;
+        background-color: #1890ff;
+    }
+    &__btn:hover {
+        background-color: #40a9ff;
+    }
+    &__dir {
+        margin-bottom: 0; 
+        padding:"0 15px 8px";
+    }
+}

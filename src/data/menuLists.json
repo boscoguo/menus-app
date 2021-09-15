@@ -11,7 +11,8 @@
                 "title": "son 1",
                 "key": "0-0-1", 
                 "children": [
-                    {"title": "test 1", "key": "0-0-0-0"}
+                    {"title": "Button 1", "key": "0-0-0-0"},
+                    {"title": "Add node", "key": "0-0-0-1"}
                 ]
             }
         ]
@@ -21,14 +22,14 @@
         "key": "1-0",
         "children": [
             {
-                "title": "tes 2",
+                "title": "Button 2",
                 "key": "1-0-0"
             },
             {
                 "title": "son2",
                 "key": "1-0-1", 
                 "children": [
-                    {"title": "leaf", "key": "1-0-0-0"}
+                    {"title": "Button 3", "key": "1-0-0-0"}
                 ]
             }
         ]

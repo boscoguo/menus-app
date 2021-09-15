@@ -1,24 +1,18 @@
-import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { getEvent } from "../../action/eventsAction";
-import CardsContainer from "./cardsContainer";
+import React, { useState } from "react";
 import data from "../../data/menuLists.json";
-import BottomPart from "./bottomPart";
 import Menu from "./menu";
 import "./leftPanel.scss";
 
-const LeftPanel = () => {
+interface LeftPanelProps {
+  btnValue: string,
+  isCancel: boolean
+}
 
-  // const dispatch = useDispatch();
-  // useEffect(() => {
-  //   dispatch(getEvent(0));
-  // },[])
-  
+const LeftPanel = ({ btnValue, isCancel }: LeftPanelProps) => {
+
   return (
-    <div className="left">
-      {/* <CardsContainer data={data} /> */}
-      {/* <BottomPart /> */}
-      <Menu data={data}/>
+    <div className={!isCancel && btnValue && btnValue === "login" ? "close transition" : "left transition"}>
+      <Menu data={data} />
     </div>
   );
 };

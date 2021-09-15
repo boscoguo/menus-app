@@ -12,3 +12,21 @@ code {
     monospace;
 }
 
+.close {
+  transform:translateX(-350px);
+  max-width: 0;
+}
+
+.transition {
+  transition: transform 1s;
+}
+
+.hide {
+  display: none;
+}
+
+.full-screen {
+  width: 100%;
+  margin: 200px auto;
+}
+
