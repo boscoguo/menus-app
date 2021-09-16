@@ -24,18 +24,20 @@ const addTreeNode = (data: any, key: string, ifAdd: boolean) => {
           title: "new son",
           key: `${item.key}-${item.children.length}`,
           children: [
-            { title: "new son button", key: `${item.key}-${item.children.length}-0`, ifAdd: true }
+            {
+              title: "new son button",
+              key: `${item.key}-${item.children.length}-0`,
+              ifAdd: true
+            }
           ]
-        }
+        };
         item.children.push(newElement);
       } else if (item.children) {
         addTreeNode(item.children, key, ifAdd);
       }
-    })
+    });
   }
-  return data
-}
-
-
+  return data;
+};
 
 export { filterMenuTitle, addTreeNode };
