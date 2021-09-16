@@ -1,9 +1,9 @@
 const filterMenuTitle = (data: any) => {
   const valuesArr = Object.values(data);
   const obj = { isBtnTitle: false, title: "" };
-  valuesArr.map(value => {
+  valuesArr.forEach(value => {
     if (value && Array.isArray(value)) {
-      value.map(item => {
+      value.forEach(item => {
         filterMenuTitle(item);
         obj.isBtnTitle = false;
       });
@@ -18,7 +18,7 @@ const filterMenuTitle = (data: any) => {
 const addTreeNode = (data: any, key: string, ifAdd: boolean) => {
   if (ifAdd) {
     const parentElementKey = key.slice(0, -2);
-    data.map((item: any) => {
+    data.forEach((item: any) => {
       if (item.key === parentElementKey) {
         const newElement = {
           title: "new son",

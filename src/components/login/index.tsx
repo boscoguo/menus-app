@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import { BtnContext } from "../../context/contextManager";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useHistory } from 'react-router-dom';
