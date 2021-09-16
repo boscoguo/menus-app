@@ -28,9 +28,11 @@
         background-color: #f6f8fa;
         border: 1px solid hsla(210,18%,87%,1);
         border-radius: 6px;
+       &-error {
+           color: #ff4d4f;
+       }
        &__email {
            margin-bottom: 15px;
-           
        }
        &__pw {
            margin-bottom: 20px;

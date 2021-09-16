@@ -1,18 +1,41 @@
-const renderMenuTitle = (data: any) => {
+const filterMenuTitle = (data: any) => {
   const valuesArr = Object.values(data);
-  const obj = { flag: false, title: "" };
+  const obj = { isBtnTitle: false, title: "" };
   valuesArr.map(value => {
     if (value && Array.isArray(value)) {
       value.map(item => {
-        renderMenuTitle(item);
-        obj.flag = false;
+        filterMenuTitle(item);
+        obj.isBtnTitle = false;
       });
     } else {
       obj.title = data.title;
-      obj.flag = true;
+      obj.isBtnTitle = true;
     }
   });
   return obj;
 };
 
-export { renderMenuTitle };
+const addTreeNode = (data: any, key: string, ifAdd: boolean) => {
+  if (ifAdd) {
+    const parentElementKey = key.slice(0, -2);
+    data.map((item: any) => {
+      if (item.key === parentElementKey) {
+        const newElement = {
+          title: "new son",
+          key: `${item.key}-${item.children.length}`,
+          children: [
+            { title: "new son button", key: `${item.key}-${item.children.length}-0`, ifAdd: true }
+          ]
+        }
+        item.children.push(newElement);
+      } else if (item.children) {
+        addTreeNode(item.children, key, ifAdd);
+      }
+    })
+  }
+  return data
+}
+
+
+
+export { filterMenuTitle, addTreeNode };

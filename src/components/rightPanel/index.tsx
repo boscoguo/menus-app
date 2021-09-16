@@ -4,10 +4,10 @@ import RouterAll from "../router";
 import "./rightPanel.scss";
 
 const RightPanel = () => {
-  const { isCancel } = useContext(BtnContext);
+  const { btnValue} = useContext(BtnContext);
 
   return (
-    <div className={isCancel ? "right" : "full-screen" }>
+    <div className={btnValue === "login" ? "full-screen" : "right" }>
       <RouterAll />
     </div>
   );

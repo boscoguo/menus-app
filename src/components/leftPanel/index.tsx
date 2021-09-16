@@ -4,14 +4,13 @@ import Menu from "./menu";
 import "./leftPanel.scss";
 
 interface LeftPanelProps {
-  btnValue: string,
-  isCancel: boolean
+  btnValue: string
 }
 
-const LeftPanel = ({ btnValue, isCancel }: LeftPanelProps) => {
+const LeftPanel = ({ btnValue }: LeftPanelProps) => {
 
   return (
-    <div className={!isCancel && btnValue && btnValue === "login" ? "close transition" : "left transition"}>
+    <div className={btnValue && btnValue === "login" ? "close transition" : "left transition"}>
       <Menu data={data} />
     </div>
   );

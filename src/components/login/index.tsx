@@ -17,7 +17,7 @@ const loginSchema = Yup.object().shape({
 const LoginForm = () => {
     const btnValueContext = useContext(BtnContext);
     let history = useHistory();
-    const { setIsCancel, isCancel } = btnValueContext;
+    const { setBtnValue } = btnValueContext;
     const handleSubmit = (values: any, { setSubmitting }: any) => {
         setTimeout(() => {
             alert(JSON.stringify(values, null, 2));
@@ -27,11 +27,11 @@ const LoginForm = () => {
 
     const handleCancelBtn = () => {
         history.push("/");
-        setIsCancel(true);
+        setBtnValue("/");
     }
 
     return (
-        <div className={isCancel ? "login" : "login"}>
+        <div className="login">
             <h1>Login</h1>
             <Formik
                 initialValues={{ email: "", password: "" }}
@@ -45,10 +45,12 @@ const LoginForm = () => {
                                 <div className="login__form__email">
                                     <label>
                                         <p className="login__form__email-title">Email:</p>
-                                        <div className="login__email-input">
+                                        <div className="login__form__email-input">
                                             <Field type="email" name="email" />
                                         </div>
-                                        <ErrorMessage name="email" component="div" />
+                                        <div className="login__form-error">
+                                            <ErrorMessage name="email" component="div" />
+                                        </div>
                                     </label>
                                 </div>
                                 <div className="login__form__pw">
@@ -57,7 +59,9 @@ const LoginForm = () => {
                                         <div className="login__form__pw-input">
                                             <Field type="password" name="password" />
                                         </div>
-                                        <ErrorMessage name="password" component="div" />
+                                        <div className="login__form-error">
+                                            <ErrorMessage name="password" component="div" />
+                                        </div>
                                     </label>
                                 </div>
                                 <div className="login__form__btn-submit">
@@ -67,10 +71,10 @@ const LoginForm = () => {
                                 </div>
                             </Form>
                             <div className="login__form__btn-cancel">
-                                    <button onClick={handleCancelBtn}>
-                                        Cancel
-                                    </button>
-                                </div>
+                                <button onClick={handleCancelBtn}>
+                                    Cancel
+                                </button>
+                            </div>
                         </div>
                     );
                 }}

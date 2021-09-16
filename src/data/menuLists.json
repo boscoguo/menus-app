@@ -9,27 +9,38 @@
             },
             {
                 "title": "son 1",
-                "key": "0-0-1", 
+                "key": "0-0-1",
                 "children": [
-                    {"title": "Button 1", "key": "0-0-0-0"},
-                    {"title": "Add node", "key": "0-0-0-1"}
+                    {
+                        "title": "Button 1",
+                        "key": "0-0-1-0"
+                    },
+                    {
+                        "title": "Add node",
+                        "key": "0-0-1-1",
+                        "ifAdd": true
+                    }
                 ]
             }
         ]
-    }, 
+    },
     {
         "title": "parent 2",
-        "key": "1-0",
+        "key": "0-1",
         "children": [
             {
                 "title": "Button 2",
-                "key": "1-0-0"
+                "key": "0-1-0",
+                "ifAdd": true
             },
             {
                 "title": "son2",
-                "key": "1-0-1", 
+                "key": "0-1-1",
                 "children": [
-                    {"title": "Button 3", "key": "1-0-0-0"}
+                    {
+                        "title": "Button 3",
+                        "key": "0-1-1-0"
+                    }
                 ]
             }
         ]

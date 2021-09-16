@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Tree } from 'antd';
 import { Link } from "react-router-dom";
 import { DownOutlined } from '@ant-design/icons';
-import { renderMenuTitle } from "../../../utils/MenuTitleUtils";
+import { filterMenuTitle, addTreeNode } from "../../../utils/MenuTitleUtils";
 import { BtnContext } from "../../../context/contextManager";
 
 import "./menu.scss";
@@ -16,29 +16,38 @@ const Menu = ({ data }: MenuProps) => {
   const btnValueContext = useContext(BtnContext);
   const { setBtnValue } = btnValueContext;
   const renderTitle = (nodeData: any) => {
+    const { isBtnTitle, title } = filterMenuTitle(nodeData)
     return (
       <>
-        {renderMenuTitle(nodeData).flag ? <Link to={`/${renderMenuTitle(nodeData).title.replace(/\ /g, "-")}`} >
-          <button className="menu__btn">{renderMenuTitle(nodeData).title}</button>
-        </Link> : <p className="menu__dir">{renderMenuTitle(nodeData).title}</p>}
+        {isBtnTitle ? <Link to={`/${title.replace(/\ /g, "-")}`} >
+          <button className="menu__tree__btn">{title}</button>
+        </Link> : <p className="menu__tree__dir">{title}</p>}
       </>
     )
   }
 
   const handleOnSelect = (keys: React.Key[], info: any) => {
-    setBtnValue(info.node.title);
+    const { node } = info;
+    const { title, key, ifAdd } = node;
+    setBtnValue(title);
+    addTreeNode(data, key, ifAdd)
   }
 
   return (
     <div className="menu">
-      <Tree
-        showIcon
-        defaultExpandAll
-        switcherIcon={<DownOutlined />}
-        treeData={data}
-        titleRender={(nodeData) => renderTitle(nodeData)}
-        onSelect={handleOnSelect}
-      />
+      <div className="menu__head">
+        <h2>Menu</h2>
+      </div>
+      <div className="menu__tree">
+        <Tree
+          showIcon
+          defaultExpandAll
+          switcherIcon={<DownOutlined />}
+          treeData={[...data]}
+          titleRender={(nodeData) => renderTitle(nodeData)}
+          onSelect={handleOnSelect}
+        />
+      </div>
     </div>
   );
 }
