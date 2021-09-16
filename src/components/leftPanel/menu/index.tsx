@@ -1,9 +1,11 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { Tree } from 'antd';
 import { Link } from "react-router-dom";
 import { DownOutlined } from '@ant-design/icons';
 import { filterMenuTitle, addTreeNode } from "../../../utils/MenuTitleUtils";
 import { BtnContext } from "../../../context/contextManager";
+import { useHistory } from 'react-router-dom';
+import { replace } from "../../../utils/urlUtils";
 
 import "./menu.scss";
 
@@ -14,12 +16,13 @@ interface MenuProps {
 const Menu = ({ data }: MenuProps) => {
 
   const btnValueContext = useContext(BtnContext);
+  let history = useHistory();
   const { setBtnValue } = btnValueContext;
   const renderTitle = (nodeData: any) => {
     const { isBtnTitle, title } = filterMenuTitle(nodeData)
     return (
       <>
-        {isBtnTitle ? <Link to={`/${title.replace(/\ /g, "-")}`} >
+        {isBtnTitle ? <Link to={`/${replace(title, " ", "-")}`} >
           <button className="menu__tree__btn">{title}</button>
         </Link> : <p className="menu__tree__dir">{title}</p>}
       </>
@@ -31,6 +34,9 @@ const Menu = ({ data }: MenuProps) => {
     const { title, key, ifAdd } = node;
     setBtnValue(title);
     addTreeNode(data, key, ifAdd)
+    if (ifAdd) {
+      history.push("/");
+    }
   }
 
   return (
