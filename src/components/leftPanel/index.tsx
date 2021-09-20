@@ -1,17 +1,14 @@
-import React from "react";
-import data from "../../data/menuLists.json";
-import Menu from "./menu";
+import React, { useContext } from "react";
+import Menu from "../menu";
+import { BtnContext } from "../../context/contextManager";
 import "./leftPanel.scss";
 
-interface LeftPanelProps {
-  btnValue: string
-}
-
-const LeftPanel = ({ btnValue }: LeftPanelProps) => {
+const LeftPanel = () => {
+  const {btnValue} = useContext(BtnContext);
 
   return (
-    <div className={btnValue && btnValue === "login" ? "close transition" : "left transition"}>
-      <Menu data={data} />
+    <div className={btnValue && btnValue === "login" ? "close transition" : "left transition"} data-testid = "left-panel">
+      <Menu />
     </div>
   );
 };

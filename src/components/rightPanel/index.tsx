@@ -7,7 +7,7 @@ const RightPanel = () => {
   const { btnValue} = useContext(BtnContext);
 
   return (
-    <div className={btnValue === "login" ? "full-screen" : "right" }>
+    <div className={btnValue && btnValue === "login" ? "full-screen" : "right" } data-testid="right-panel">
       <RouterAll />
     </div>
   );

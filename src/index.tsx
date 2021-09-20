@@ -1,13 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import 'antd/dist/antd.css'; 
-import "./index.scss";
 import Container from "./components/container";
 import reportWebVitals from "./reportWebVitals";
+import Provider from "./components/provider/Provider";
+import 'antd/dist/antd.css'; 
+import "./index.scss";
+
 
 ReactDOM.render(
   <React.StrictMode>
+    <Provider>
       <Container />
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );

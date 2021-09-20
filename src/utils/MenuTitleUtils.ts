@@ -15,7 +15,7 @@ const filterMenuTitle = (data: any) => {
   return obj;
 };
 
-const addTreeNode = (data: any, key: string, ifAdd: boolean) => {
+const addTreeNode = (data: any, key: string, ifAdd: boolean ) => {
   if (ifAdd) {
     const parentElementKey = key.slice(0, -2);
     data.forEach((item: any) => {

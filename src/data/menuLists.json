@@ -29,7 +29,7 @@
         "key": "0-1",
         "children": [
             {
-                "title": "Button 2",
+                "title": "Add node",
                 "key": "0-1-0",
                 "ifAdd": true
             },

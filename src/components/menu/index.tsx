@@ -2,28 +2,25 @@ import React, { useContext } from "react";
 import { Tree } from 'antd';
 import { Link } from "react-router-dom";
 import { DownOutlined } from '@ant-design/icons';
-import { filterMenuTitle, addTreeNode } from "../../../utils/MenuTitleUtils";
-import { BtnContext } from "../../../context/contextManager";
+import { filterMenuTitle, addTreeNode } from "../../utils/MenuTitleUtils";
+import { BtnContext } from "../../context/contextManager";
 import { useHistory } from 'react-router-dom';
-import { replace } from "../../../utils/urlUtils";
+import { replace } from "../../utils/urlUtils";
+import menuData from "../../data/menuLists.json";
 
 import "./menu.scss";
 
-interface MenuProps {
-  data: any
-}
 
-const Menu = ({ data }: MenuProps) => {
-
-  const btnValueContext = useContext(BtnContext);
+const Menu = () => {
   let history = useHistory();
-  const { setBtnValue } = btnValueContext;
+  const { setBtnValue } = useContext(BtnContext);
+
   const renderTitle = (nodeData: any) => {
     const { isBtnTitle, title } = filterMenuTitle(nodeData)
     return (
       <>
         {isBtnTitle ? <Link to={`/${replace(title, " ", "-")}`} >
-          <button className="menu__tree__btn">{title}</button>
+          <button className="menu__tree__btn" >{title}</button>
         </Link> : <p className="menu__tree__dir">{title}</p>}
       </>
     )
@@ -33,7 +30,7 @@ const Menu = ({ data }: MenuProps) => {
     const { node } = info;
     const { title, key, ifAdd } = node;
     setBtnValue(title);
-    addTreeNode(data, key, ifAdd)
+    addTreeNode(menuData, key, ifAdd)
     if (ifAdd) {
       history.push("/");
     }
@@ -49,7 +46,7 @@ const Menu = ({ data }: MenuProps) => {
           showIcon
           defaultExpandAll
           switcherIcon={<DownOutlined />}
-          treeData={[...data]}
+          treeData={Object.assign([], menuData)}
           titleRender={(nodeData) => renderTitle(nodeData)}
           onSelect={handleOnSelect}
         />
