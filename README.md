@@ -10,33 +10,6 @@ In the project directory, please run:
 
 In order to install all dependencies that the project needs to use
 
-### `project structure statment`
-├── Readme.md                  
-├── app                         
-├── config                      
-│   ├── default.json
-│   ├── dev.json                
-│   ├── experiment.json         
-│   ├── index.js                
-│   ├── local.json              
-│   ├── production.json         
-│   └── test.json               
-├── data
-├── doc                         
-├── environment
-├── gulpfile.js
-├── locales
-├── logger-service.js           
-├── node_modules
-├── package.json
-├── app-service.js              
-├── static                      
-│   └── initjson
-│       └── config.js         
-├── test
-├── test-service.js
-└── tools
-
 ## Available Scripts
 
 In the project directory, you can run:
