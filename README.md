@@ -12,9 +12,9 @@ In order to install all dependencies that the project needs to use
 
 ### `project structure`
 
->test
->>11111
->>>2222
+>test        //statement
+>>11111      //11 statement
+>>>2222      // 2222 statement
 
 ## Available Scripts
 
