@@ -11,28 +11,28 @@ In the project directory, please run:
 In order to install all dependencies that the project needs to use
 
 ### `project structure statment`
-├── Readme.md                   // help
-├── app                         // 应用
-├── config                      // 配置
+├── Readme.md                  
+├── app                         
+├── config                      
 │   ├── default.json
-│   ├── dev.json                // 开发环境
-│   ├── experiment.json         // 实验
-│   ├── index.js                // 配置控制
-│   ├── local.json              // 本地
-│   ├── production.json         // 生产环境
-│   └── test.json               // 测试环境
+│   ├── dev.json                
+│   ├── experiment.json         
+│   ├── index.js                
+│   ├── local.json              
+│   ├── production.json         
+│   └── test.json               
 ├── data
-├── doc                         // 文档
+├── doc                         
 ├── environment
 ├── gulpfile.js
 ├── locales
-├── logger-service.js           // 启动日志配置
+├── logger-service.js           
 ├── node_modules
 ├── package.json
-├── app-service.js              // 启动应用配置
-├── static                      // web静态资源加载
+├── app-service.js              
+├── static                      
 │   └── initjson
-│       └── config.js         // 提供给前端的配置
+│       └── config.js         
 ├── test
 ├── test-service.js
 └── tools
