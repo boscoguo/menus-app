@@ -10,11 +10,6 @@ In the project directory, please run:
 
 In order to install all dependencies that the project needs to use
 
-### `project structure`
-
->test        //statement
->>11111      //11 statement
->>>2222      // 2222 statement
 
 ## Available Scripts
 
