@@ -77,9 +77,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 21 directories, 60 files
 
+
+
 ## After clone the project
 
 In the project directory, please run:
+
 
 ### `npm install`
 
@@ -133,6 +136,7 @@ when the email and password fields valid, the data should be submitted to a fake
 when clicking this button, the page should go back to the home page and url should recover to home url.
 
 
+
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
@@ -167,6 +171,7 @@ when clicking this button, the page should go back to the home page and url shou
 when request success, the data would be responsed from the server.
 
 when request fail, null would be responsed from the server.
+
 
 
 ### `npm run build`
