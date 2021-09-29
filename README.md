@@ -104,17 +104,16 @@ You will also see any lint errors in the console.
 ### `Project Introduction`
 This application is mainly consist of menu part and login part.
 
-<img width="1652" alt="屏幕快照 2021-09-30 上午9 22 16" src="https://user-images.githubusercontent.com/20954764/135361706-adb8f846-4ee5-4eb8-8a07-f5c0e3ab9431.png">
-
-<img width="1371" alt="屏幕快照 2021-09-30 上午9 24 12" src="https://user-images.githubusercontent.com/20954764/135361840-db5c6f7e-6006-456c-b12f-7f4c3c9ffa7b.png">
-
-
 #### `menu part`
 In the menu, there are some buttons including login button, add node button, button 1 and button 3.
+
+<img width="1652" alt="屏幕快照 2021-09-30 上午9 22 16" src="https://user-images.githubusercontent.com/20954764/135361706-adb8f846-4ee5-4eb8-8a07-f5c0e3ab9431.png">
 
 
 ##### `login  button`
 When clicking this button, the whole left menu would be hidden and login page will be displayed full screen. The url should go to the login router.
+
+<img width="1371" alt="屏幕快照 2021-09-30 上午9 24 12" src="https://user-images.githubusercontent.com/20954764/135361840-db5c6f7e-6006-456c-b12f-7f4c3c9ffa7b.png">
 
 ##### `Add node button`
 When clicking this button, the new nested menu will be generated and router can not change.
