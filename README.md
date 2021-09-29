@@ -17,7 +17,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 │   ├── manifest.json
 │   └── robots.txt
 ├── src
-│   ├── components
+│   ├── components                                                               //components
 │   │   ├── commonNode
 │   │   │   ├── CommonNode.test.tsx
 │   │   │   └── CommonNode.tsx
