@@ -8,7 +8,6 @@ const httpPost = async (url: string, values: any) => {
   } catch (e) {
     return null;
   }
-}
+};
 
-export { httpPost }
-
+export { httpPost };
