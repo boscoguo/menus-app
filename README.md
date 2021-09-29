@@ -85,6 +85,7 @@ In the project directory, please run:
 
 In order to install all dependencies that the project needs to use
 
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -130,7 +131,6 @@ when the email and password fields valid, the data should be submitted to a fake
 ##### `cancel button`
 
 when clicking this button, the page should go back to the home page and url should recover to home url.
-
 
 
 ### `npm test`
