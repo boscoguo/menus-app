@@ -77,14 +77,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 21 directories, 60 files
 
+```
 
-
-## After clone the project
+## `After clone the project`
 
 In the project directory, please run:
 
 
-### npm install
+### `npm install`
 
 In order to install all dependencies that the project needs to use
 
