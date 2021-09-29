@@ -112,11 +112,15 @@ This application is mainly consist of menu part and login part.
 #### `menu part`
 In the menu, there are some buttons including login button, add node button, button 1 and button 3.
 
+
 ##### `login  button`
 When clicking this button, the whole left menu would be hidden and login page will be displayed full screen. The url should go to the login router.
 
 ##### `Add node button`
 When clicking this button, the new nested menu will be generated and router can not change.
+
+<img width="1645" alt="屏幕快照 2021-09-30 上午9 26 41" src="https://user-images.githubusercontent.com/20954764/135362042-56260b86-8439-4479-8df5-4c89c7e17d38.png">
+
 
 ##### `Button 1 and Button 3`
 When these two buttons are clicked, the related page will be displayed and the routers should go to the related router url. 
