@@ -1,3 +1,3 @@
 import React, { createContext } from "react";
 
-export const BtnContext = createContext(null);
+export const AppContext = createContext(null);

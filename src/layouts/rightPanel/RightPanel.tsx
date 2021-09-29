@@ -1,14 +1,14 @@
 import React, {useContext} from "react";
-import { BtnContext } from "../../context/contextManager";
-import RouterAll from "../router";
+import { AppContext } from "../../context/contextManager";
+import RouterComponent from "../../components/router/RouterComponent";
 import "./rightPanel.scss";
 
 const RightPanel = () => {
-  const { btnValue} = useContext(BtnContext);
+  const { btnValue} = useContext(AppContext);
 
   return (
     <div className={btnValue && btnValue === "login" ? "full-screen" : "right" } data-testid="right-panel">
-      <RouterAll />
+      <RouterComponent />
     </div>
   );
 };

@@ -1,7 +1,7 @@
-import React, { useContext } from "react";
+import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
-import LeftPanel from "../leftPanel";
-import RightPanel from "../rightPanel";
+import LeftPanel from "../leftPanel/LeftPanel";
+import RightPanel from "../rightPanel/RightPanel";
 
 import "./container.scss";
 

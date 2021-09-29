@@ -1,7 +1,9 @@
 import React, { useContext } from "react";
-import { BtnContext } from "../../context/contextManager";
+import { AppContext } from "../../context/contextManager";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useHistory } from 'react-router-dom';
+import { httpPost } from "../../utils/httpUtils";
+import { LOGIN_BASE_URL } from "../../config/base";
 import * as Yup from "yup";
 
 import "./login.scss";
@@ -15,24 +17,14 @@ const loginSchema = Yup.object().shape({
 });
 
 const LoginForm = () => {
-	const btnValueContext = useContext(BtnContext);
+	const btnValueContext = useContext(AppContext);
 	let history = useHistory();
 	const { setBtnValue } = btnValueContext;
-	const handleSubmit = (values: any, { setSubmitting }: any) => {
-		setTimeout(() => {
-			console.log(JSON.stringify(values, null, 2));
-			fetch('https://login.free.beeceptor.com/login', {
-				method: 'post',
-				body: JSON.stringify(values, null, 2)
-			}).then((response) => {
-				return response.text();
-			}).then((text) => {
-				console.log(text)
-			}).catch(error => {
-				console.error(error);
-			})
-			setSubmitting(false);
-		}, 400);
+	
+	const handleSubmit = async (values: any, { setSubmitting }: any) => {
+		const result = await httpPost(LOGIN_BASE_URL, values);
+		console.log("result", result);
+		setSubmitting(false);
 	};
 
 	const handleCancelBtn = () => {

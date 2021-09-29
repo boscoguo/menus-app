@@ -1,19 +1,18 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Tree } from 'antd';
 import { Link } from "react-router-dom";
 import { DownOutlined } from '@ant-design/icons';
 import { filterMenuTitle, addTreeNode } from "../../utils/MenuTitleUtils";
-import { BtnContext } from "../../context/contextManager";
+import { AppContext } from "../../context/contextManager";
 import { useHistory } from 'react-router-dom';
 import { replace } from "../../utils/urlUtils";
 import menuData from "../../data/menuLists.json";
 
 import "./menu.scss";
 
-
 const Menu = () => {
   let history = useHistory();
-  const { setBtnValue } = useContext(BtnContext);
+  const { setBtnValue } = useContext(AppContext);
 
   const renderTitle = (nodeData: any) => {
     const { isBtnTitle, title } = filterMenuTitle(nodeData)
@@ -30,7 +29,7 @@ const Menu = () => {
     const { node } = info;
     const { title, key, ifAdd } = node;
     setBtnValue(title);
-    addTreeNode(menuData, key, ifAdd)
+    addTreeNode(menuData, key, ifAdd);
     if (ifAdd) {
       history.push("/");
     }

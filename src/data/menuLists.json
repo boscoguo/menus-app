@@ -1,48 +1,43 @@
 [
-    {
-        "title": "parent 1",
-        "key": "0-0",
-        "children": [
-            {
-                "title": "login",
-                "key": "0-0-0"
-            },
-            {
-                "title": "son 1",
-                "key": "0-0-1",
-                "children": [
-                    {
-                        "title": "Button 1",
-                        "key": "0-0-1-0"
-                    },
-                    {
-                        "title": "Add node",
-                        "key": "0-0-1-1",
-                        "ifAdd": true
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "title": "parent 2",
-        "key": "0-1",
-        "children": [
-            {
-                "title": "Add node",
-                "key": "0-1-0",
-                "ifAdd": true
-            },
-            {
-                "title": "son2",
-                "key": "0-1-1",
-                "children": [
-                    {
-                        "title": "Button 3",
-                        "key": "0-1-1-0"
-                    }
-                ]
-            }
-        ]
-    }
+	{
+		"title": "parent 1",
+		"key": "0-0",
+		"children": [
+			{
+				"title": "login",
+				"key": "0-0-0"
+			},
+			{
+				"title": "son 1",
+				"key": "0-0-1",
+				"children": [
+					{
+						"title": "Button 1",
+						"key": "0-0-1-0"
+					},
+					{
+						"title": "Add node",
+						"key": "0-0-1-1",
+						"ifAdd": true
+					}
+				]
+			}
+		]
+	},
+	{
+		"title": "parent 2",
+		"key": "0-1",
+		"children": [
+			{
+				"title": "son2",
+				"key": "0-1-1",
+				"children": [
+					{
+						"title": "Button 3",
+						"key": "0-1-1-0"
+					}
+				]
+			}
+		]
+	}
 ]
