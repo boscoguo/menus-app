@@ -103,6 +103,8 @@ You will also see any lint errors in the console.
 
 ### `Project Introduction`
 This application is mainly consist of menu part and login part.
+<img width="1650" alt="initial" src="https://user-images.githubusercontent.com/20954764/135361345-7c40560b-2511-4db7-bdb2-1aae8173c9f1.png">
+<img width="1650" alt="屏幕快照 2021-09-30 上午9 19 42" src="https://user-images.githubusercontent.com/20954764/135361456-0e054359-ddc4-4df8-8794-e98771725ab9.png">
 
 #### `menu part`
 In the menu, there are some buttons including login button, add node button, button 1 and button 3.
