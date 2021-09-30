@@ -12,7 +12,7 @@ import "./menu.scss";
 
 const Menu = () => {
   let history = useHistory();
-  const { setBtnValue } = useContext(AppContext);
+  const { setUrlPathName } = useContext(AppContext);
 
   const renderTitle = (nodeData: any) => {
     const { isBtnTitle, title } = filterMenuTitle(nodeData)
@@ -28,7 +28,7 @@ const Menu = () => {
   const handleOnSelect = (keys: React.Key[], info: any) => {
     const { node } = info;
     const { title, key, ifAdd } = node;
-    setBtnValue(title);
+    setUrlPathName(title);
     addTreeNode(menuData, key, ifAdd);
     if (ifAdd) {
       history.push("/");

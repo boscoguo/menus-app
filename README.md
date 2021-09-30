@@ -75,6 +75,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ├── tree.text
 └── tsconfig.json
 
+```
+
 21 directories, 60 files
 
 ## After clone the project
@@ -166,7 +168,7 @@ when clicking this button, the page should go back to the home page and url shou
 
 when request success, the data would be responsed from the server.
 
-when request fail, null would be responsed from the server.
+when request fail, unconfiguration information from the fake serve would be responsed.
 
 
 ### `npm run build`

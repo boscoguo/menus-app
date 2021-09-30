@@ -19,7 +19,7 @@ const loginSchema = Yup.object().shape({
 const LoginForm = () => {
 	const btnValueContext = useContext(AppContext);
 	let history = useHistory();
-	const { setBtnValue } = btnValueContext;
+	const { setUrlPathName } = btnValueContext;
 	
 	const handleSubmit = async (values: any, { setSubmitting }: any) => {
 		const result = await httpPost(LOGIN_BASE_URL, values);
@@ -29,7 +29,7 @@ const LoginForm = () => {
 
 	const handleCancelBtn = () => {
 		history.push("/");
-		setBtnValue("/");
+		setUrlPathName("/");
 	}
 
 	return (

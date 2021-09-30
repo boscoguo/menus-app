@@ -8,8 +8,8 @@ interface ProviderProps {
 
 const Provider = ({ children }: ProviderProps) => {
 	const pathName = window.location.pathname;
-	const [btnValue, setBtnValue] = useState(replace(pathName, "/", ""));
-	return <AppContext.Provider value={{ btnValue, setBtnValue }}>{children}</AppContext.Provider>
+	const [urlPathName, setUrlPathName] = useState(replace(pathName, "/", ""));
+	return <AppContext.Provider value={{ urlPathName, setUrlPathName }}>{children}</AppContext.Provider>
 }
 
 export default Provider;

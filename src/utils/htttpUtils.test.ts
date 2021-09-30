@@ -14,6 +14,6 @@ describe("httpPost", () => {
 
   it("should include error information when fake end point address is incorrect", async () => {
     const result = await httpPost(WRONGLOGIN_BASE_URL, values);
-    expect(result).toEqual(null);
+    expect(result).toMatch(/Hey ya!/);
   });
 });

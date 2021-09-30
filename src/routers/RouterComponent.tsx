@@ -1,9 +1,8 @@
 import React from "react";
-import { LoginPage, CommonPage } from "../../pages";
+import { LoginPage, CommonPage } from "../pages";
 import { Switch, Route } from "react-router-dom";
 
 const RouterComponent = () => {
-
 	return (
 		<Switch>
 			<Route exact path="/login" component={LoginPage} />
