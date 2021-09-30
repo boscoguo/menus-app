@@ -145,6 +145,8 @@ when email format is incorrect, invalid message will show on the error message c
 when typing password too long or too short, error message should be displayed on error message components.
 
 <img width="650" alt="屏幕快照 2021-09-30 上午9 48 29" src="https://user-images.githubusercontent.com/20954764/135363645-47901680-c888-4994-91f6-466f5c7e18c1.png">
+<img width="905" alt="屏幕快照 2021-09-30 上午11 48 38" src="https://user-images.githubusercontent.com/20954764/135372458-377ea060-179f-40ba-a8ee-821b53bab693.png">
+
 
 ##### `submit button`
 
