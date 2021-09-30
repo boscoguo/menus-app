@@ -17,7 +17,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 │   ├── manifest.json
 │   └── robots.txt
 ├── src
-│   ├── components                                                               //components
+│   ├── components                                                              
 │   │   ├── commonNode
 │   │   │   ├── CommonNode.test.tsx
 │   │   │   └── CommonNode.tsx
@@ -26,12 +26,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 │   │   │   ├── Login.test.tsx
 │   │   │   ├── Login.tsx
 │   │   │   └── login.scss
-│   │   ├── menu
-│   │   │   ├── Menu.test.tsx
-│   │   │   ├── Menu.tsx
-│   │   │   └── menu.scss
-│   │   └── router
-│   │       └── RouterComponent.tsx
+│   │   └── menu
+│   │       ├── Menu.test.tsx
+│   │       ├── Menu.tsx
+│   │       └── menu.scss
 │   ├── config
 │   │   └── base.ts
 │   ├── context
@@ -64,6 +62,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 │   │       └── LoginPage.tsx
 │   ├── react-app-env.d.ts
 │   ├── reportWebVitals.ts
+│   ├── routers
+│   │   └── RouterComponent.tsx
 │   ├── setupTests.ts
 │   └── utils
 │       ├── MenuTitleUtils.test.ts
