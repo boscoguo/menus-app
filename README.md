@@ -124,6 +124,8 @@ When clicking this button, the new nested menu will be generated and router can 
 ##### `Button 1 and Button 3`
 When these two buttons are clicked, the related page will be displayed and the routers should go to the related router url. 
 
+<img width="1647" alt="屏幕快照 2021-09-30 上午9 31 12" src="https://user-images.githubusercontent.com/20954764/135362331-fdfc27e7-0226-4251-bbee-6351c5bd6d4c.png">
+
 #### `login part`
 In the login form, the email and password fields should be included. Also, the submit button and cancel button are required.
 
@@ -131,9 +133,15 @@ In the login form, the email and password fields should be included. Also, the s
 
 When fields are empty, error message should be displayed as required.
 
+<img width="1647" alt="屏幕快照 2021-09-30 上午9 31 12" src="https://user-images.githubusercontent.com/20954764/135363466-d3c0d2c9-1ad9-46b2-b5b0-7b976c8ab833.png">
+
 when email format is incorrect, invalid message will show on the error message components.
 
+<img width="743" alt="屏幕快照 2021-09-30 上午9 47 41" src="https://user-images.githubusercontent.com/20954764/135363566-6446d101-394c-4c29-b395-c8c7beab5afb.png">
+
 when typing password too long or too short, error message should be displayed on error message components.
+
+<img width="650" alt="屏幕快照 2021-09-30 上午9 48 29" src="https://user-images.githubusercontent.com/20954764/135363645-47901680-c888-4994-91f6-466f5c7e18c1.png">
 
 ##### `submit button`
 
