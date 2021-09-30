@@ -126,6 +126,9 @@ When these two buttons are clicked, the related page will be displayed and the r
 
 <img width="1647" alt="屏幕快照 2021-09-30 上午9 31 12" src="https://user-images.githubusercontent.com/20954764/135362331-fdfc27e7-0226-4251-bbee-6351c5bd6d4c.png">
 
+<img width="1229" alt="屏幕快照 2021-09-30 上午11 41 13" src="https://user-images.githubusercontent.com/20954764/135372057-3103c5c4-c6e1-4e2b-9b4d-2992d0abc98d.png">
+
+
 #### `login part`
 In the login form, the email and password fields should be included. Also, the submit button and cancel button are required.
 
@@ -133,7 +136,7 @@ In the login form, the email and password fields should be included. Also, the s
 
 When fields are empty, error message should be displayed as required.
 
-<img width="1647" alt="屏幕快照 2021-09-30 上午9 31 12" src="https://user-images.githubusercontent.com/20954764/135363466-d3c0d2c9-1ad9-46b2-b5b0-7b976c8ab833.png">
+<img width="1040" alt="屏幕快照 2021-09-30 上午11 47 02" src="https://user-images.githubusercontent.com/20954764/135372175-19c1b81f-673d-4c7b-b6c7-f225fdc31874.png">
 
 when email format is incorrect, invalid message will show on the error message components.
 
