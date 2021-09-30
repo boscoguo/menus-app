@@ -152,6 +152,9 @@ when the email and password fields valid, the data should be submitted to a fake
 when clicking this button, the page should go back to the home page and url should recover to home url.
 
 
+<img width="1652" alt="屏幕快照 2021-09-30 上午9 22 16" src="https://user-images.githubusercontent.com/20954764/135361706-adb8f846-4ee5-4eb8-8a07-f5c0e3ab9431.png">
+
+
 
 ### `npm test`
 
@@ -160,7 +163,9 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 #### `container part`
 
-test the layout switch for menu part and login page.
+test the layout switch between menu part and login page.
+
+
 
 #### `menu part`
 
@@ -169,6 +174,9 @@ When clicking this button, the whole left menu would be hidden and login page wi
 When clicking this button, the new nested menu will be generated and router can not change.
 
 When these two buttons are clicked, the related page will be displayed and the routers should go to the related router url. 
+
+<img width="749" alt="屏幕快照 2021-09-30 上午10 48 27" src="https://user-images.githubusercontent.com/20954764/135367807-aadae679-0200-40ff-a25d-489acebb0a12.png">
+
 
 #### `login part`
 
@@ -182,12 +190,21 @@ when the email and password fields valid, the data should be submitted to a fake
 
 when clicking this button, the page should go back to the home page and url should recover to home url.
 
+<img width="752" alt="屏幕快照 2021-09-30 上午10 51 43" src="https://user-images.githubusercontent.com/20954764/135368026-1b37ae54-4a06-4b75-bc59-b9e697bf0a49.png">
+
+
 #### `http module`
 
 when request success, the data would be responsed from the server.
 
-when request fail, null would be responsed from the server.
+when request fail, unconfiguration information from the fake serve would be responsed.
 
+<img width="832" alt="屏幕快照 2021-09-30 上午11 09 36" src="https://user-images.githubusercontent.com/20954764/135369264-c5b7bf74-7455-4597-a0aa-2e50d472a9b1.png">
+
+
+#### `test for the whole application`
+
+<img width="868" alt="屏幕快照 2021-09-30 上午11 04 53" src="https://user-images.githubusercontent.com/20954764/135369124-ef01df5b-d917-44c1-a029-e4ccf13ed203.png">
 
 
 ### `npm run build`
