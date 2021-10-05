@@ -75,8 +75,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ├── tree.text
 └── tsconfig.json
 
-```
-
 21 directories, 60 files
 
 ```
