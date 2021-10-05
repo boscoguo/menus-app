@@ -80,7 +80,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ```
 # `Run the project`
 
-## `After clone the project`
+### `After clone the project`
 
 In the project directory, please run:
 
