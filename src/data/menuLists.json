@@ -16,7 +16,7 @@
 						"key": "0-0-1-0"
 					},
 					{
-						"title": "Add node",
+						"title": "Add node one",
 						"key": "0-0-1-1",
 						"ifAdd": true
 					}
@@ -28,6 +28,11 @@
 		"title": "parent 2",
 		"key": "0-1",
 		"children": [
+			{
+				"title": "Add node two",
+				"key": "0-1-0",
+				"ifAdd": true
+			},
 			{
 				"title": "son2",
 				"key": "0-1-1",

@@ -25,7 +25,7 @@ const addTreeNode = (data: any, key: string, ifAdd: boolean) => {
           key: `${item.key}-${item.children.length}`,
           children: [
             {
-              title: "new son button",
+              title: `new son button ${item.key}-${item.children.length}-0`,
               key: `${item.key}-${item.children.length}-0`,
               ifAdd: true
             }
