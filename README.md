@@ -142,7 +142,7 @@ When these two buttons are clicked, the related page will be displayed and the r
 #### 5.`login part`
 In the login form, the email and password fields should be included. Also, the submit button and cancel button are required.
 
-##### 6.`email and password fields`
+#### 6.`email and password fields`
 
 When fields are empty, error message should be displayed as required.
 
@@ -158,11 +158,11 @@ when typing password too long or too short, error message should be displayed on
 <img width="905" alt="屏幕快照 2021-09-30 上午11 48 38" src="https://user-images.githubusercontent.com/20954764/135372458-377ea060-179f-40ba-a8ee-821b53bab693.png">
 
 
-##### 7.`submit button`
+#### 7.`submit button`
 
 when the email and password fields valid, the data should be submitted to a fake end point.
 
-##### 8.`cancel button`
+#### 8.`cancel button`
 
 when clicking this button, the page should go back to the home page and url should recover to home url.
 
