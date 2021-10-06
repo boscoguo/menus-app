@@ -102,12 +102,12 @@ This application is mainly consist of menu part and login part.
 ## Features
 - [x] Add eslint, prettier, typescript, pre-commit hooks dependencies to achieve a better code style and elegent code format.
 - [x] Creat `Container.tsx` as the whole application layout and the `LeftPanel.tsx` and the `RightPanel.tsx`components are included in it.
-      - [x] LeftPanel will contain the Menu component.
-      - [x] RightPanel will display different pages by using routes.
+     - [x] LeftPanel will contain the Menu component.
+     - [x] RightPanel will display different pages by using routes.
 - [x] Creat a Menu list on the left side of the application to control the page loading of right side of SPA. 
-      - [x] Clicking the Button1 and Button3 will go to the related page on the right side.
-      - [x] Clicking the Login button will go to the login page and left side will be hidden.
-      - [x] Clicking the Add node button to generate a nested button.   
+     - [x] Clicking the Button1 and Button3 will go to the related page on the right side.
+     - [x] Clicking the Login button will go to the login page and left side will be hidden.
+     - [x] Clicking the Add node button to generate a nested button.   
 - [x] Create a Login Page containing two inputs and two buttons.
 - [x] Add unit test for the menu component by using react-testing-library.
 - [x] Add unit test for the login page by using react-testing-library.
