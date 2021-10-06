@@ -171,18 +171,18 @@ when clicking this button, the page should go back to the home page and url shou
 
 
 
-### `npm test`
+# `npm test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-#### `container part`
+### `container part`
 
 test the layout switch between menu part and login page.
 
 
 
-#### `menu part`
+### `menu part`
 
 When clicking this button, the whole left menu would be hidden and login page will be displayed full screen. The url should go to the login router.
 
@@ -193,7 +193,7 @@ When these two buttons are clicked, the related page will be displayed and the r
 <img width="749" alt="屏幕快照 2021-09-30 上午10 48 27" src="https://user-images.githubusercontent.com/20954764/135367807-aadae679-0200-40ff-a25d-489acebb0a12.png">
 
 
-#### `login part`
+### `login part`
 
 When fields are empty, error message should be displayed as required.
 
@@ -208,7 +208,7 @@ when clicking this button, the page should go back to the home page and url shou
 <img width="752" alt="屏幕快照 2021-09-30 上午10 51 43" src="https://user-images.githubusercontent.com/20954764/135368026-1b37ae54-4a06-4b75-bc59-b9e697bf0a49.png">
 
 
-#### `http module`
+### `http module`
 
 when request success, the data would be responsed from the server.
 
