@@ -13,6 +13,7 @@ import "./menu.scss";
 const Menu = () => {
   let history = useHistory();
   const { setUrlPathName } = useContext(AppContext);
+  const [menu, setMenu] = useState(menuData)
 
   const renderTitle = (nodeData: any) => {
     const { isBtnTitle, title } = filterMenuTitle(nodeData)
@@ -29,7 +30,7 @@ const Menu = () => {
     const { node } = info;
     const { title, key, ifAdd } = node;
     setUrlPathName(title);
-    addTreeNode(menuData, key, ifAdd);
+    setMenu([...addTreeNode(menuData, key, ifAdd)]);
     if (ifAdd) {
       history.push("/");
     }
@@ -45,7 +46,7 @@ const Menu = () => {
           showIcon
           defaultExpandAll
           switcherIcon={<DownOutlined />}
-          treeData={Object.assign([], menuData)}
+          treeData={menu}
           titleRender={(nodeData) => renderTitle(nodeData)}
           onSelect={handleOnSelect}
         />
