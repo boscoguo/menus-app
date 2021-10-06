@@ -96,8 +96,11 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-## `Project Introduction`
+# `Project Introduction`
 This application is mainly consist of menu part and login part.
+
+## Features
+- [x] Create a Login Page containing two inputs and two buttons
 
 #### `menu part`
 In the menu, there are some buttons including login button, add node button, button 1 and button 3.
