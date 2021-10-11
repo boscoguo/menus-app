@@ -5,9 +5,16 @@ import "./leftPanel.scss";
 
 const LeftPanel = () => {
   const { urlPathName } = useContext(AppContext);
-  
+
   return (
-    <div className={urlPathName && urlPathName === "login" ? "close transition" : "left transition"} data-testid="left-panel">
+    <div
+      className={
+        urlPathName && urlPathName === "login"
+          ? "close transition"
+          : "left transition"
+      }
+      data-testid="left-panel"
+    >
       <Menu />
     </div>
   );

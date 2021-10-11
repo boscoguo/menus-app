@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
-import { Tree } from 'antd';
+import { Tree } from "antd";
 import { Link } from "react-router-dom";
-import { DownOutlined } from '@ant-design/icons';
+import { DownOutlined } from "@ant-design/icons";
 import { filterMenuTitle, addTreeNode } from "../../utils/MenuTitleUtils";
 import { AppContext } from "../../context/contextManager";
-import { useHistory } from 'react-router-dom';
+import { useHistory } from "react-router-dom";
 import { replace } from "../../utils/urlUtils";
 import menuData from "../../data/menuLists.json";
 
@@ -13,18 +13,22 @@ import "./menu.scss";
 const Menu = () => {
   let history = useHistory();
   const { setUrlPathName } = useContext(AppContext);
-  const [menu, setMenu] = useState(menuData)
+  const [menu, setMenu] = useState(menuData);
 
   const renderTitle = (nodeData: any) => {
-    const { isBtnTitle, title } = filterMenuTitle(nodeData)
+    const { isBtnTitle, title } = filterMenuTitle(nodeData);
     return (
       <>
-        {isBtnTitle ? <Link to={`/${replace(title, " ", "-")}`} >
-          <button className="menu__tree__btn" >{title}</button>
-        </Link> : <p className="menu__tree__dir">{title}</p>}
+        {isBtnTitle ? (
+          <Link to={`/${replace(title, " ", "-")}`}>
+            <button className="menu__tree__btn">{title}</button>
+          </Link>
+        ) : (
+          <p className="menu__tree__dir">{title}</p>
+        )}
       </>
-    )
-  }
+    );
+  };
 
   const handleOnSelect = (keys: React.Key[], info: any) => {
     const { node } = info;
@@ -34,7 +38,7 @@ const Menu = () => {
     if (ifAdd) {
       history.push("/");
     }
-  }
+  };
 
   return (
     <div className="menu">
@@ -47,13 +51,12 @@ const Menu = () => {
           defaultExpandAll
           switcherIcon={<DownOutlined />}
           treeData={menu}
-          titleRender={(nodeData) => renderTitle(nodeData)}
+          titleRender={nodeData => renderTitle(nodeData)}
           onSelect={handleOnSelect}
         />
       </div>
     </div>
   );
-}
+};
 
 export default Menu;
-

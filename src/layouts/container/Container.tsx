@@ -6,13 +6,12 @@ import RightPanel from "../rightPanel/RightPanel";
 import "./container.scss";
 
 const Container = () => {
-
   return (
     <div className="containter">
-        <Router>
-          <LeftPanel />
-          <RightPanel />
-        </Router>
+      <Router>
+        <LeftPanel />
+        <RightPanel />
+      </Router>
     </div>
   );
 };

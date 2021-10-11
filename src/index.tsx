@@ -3,9 +3,8 @@ import ReactDOM from "react-dom";
 import { Container } from "./layouts";
 import reportWebVitals from "./reportWebVitals";
 import Provider from "./context/provider/Provider";
-import 'antd/dist/antd.css';
+import "antd/dist/antd.css";
 import "./index.scss";
-
 
 ReactDOM.render(
   <React.StrictMode>
