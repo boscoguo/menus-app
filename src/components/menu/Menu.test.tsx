@@ -16,7 +16,7 @@ describe("<Menu />", () => {
 		expect(nodes).toHaveLength(2);
 
 		const btns = await screen.findAllByRole("button");
-		expect(btns).toHaveLength(4);
+		expect(btns).toHaveLength(5);
 	})
 
 	it("should make the url changed when clicking show page buttons", async () => {
