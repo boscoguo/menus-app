@@ -130,7 +130,7 @@ describe("<Longin />", () => {
     async () => {
       await expect(handleSubmit).toHaveBeenLastCalledWith({
         email: "John@163.com",
-        password: "Dee12344"
+        password: "Dee12344",
       });
     };
   });

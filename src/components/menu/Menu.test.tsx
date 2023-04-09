@@ -29,13 +29,13 @@ describe("<Menu />", () => {
       </Provider>
     );
     const routerBtnOne = await screen.findByRole("button", {
-      name: "Button 1"
+      name: "Button 1",
     });
     userEvent.click(routerBtnOne);
     expect(window.location.href).toEqual("http://localhost/Button-1");
 
     const routerBtnThree = await screen.findByRole("button", {
-      name: "Button 3"
+      name: "Button 3",
     });
     userEvent.click(routerBtnThree);
     expect(window.location.href).toEqual("http://localhost/Button-3");
@@ -50,13 +50,13 @@ describe("<Menu />", () => {
       </Provider>
     );
     const addNodeBtns = await screen.findAllByRole("button", {
-      name: "Add node"
+      name: "Add node",
     });
 
-    addNodeBtns.map(async btn => {
+    addNodeBtns.map(async (btn) => {
       userEvent.click(btn);
       const newAddBtn = await screen.findAllByRole("button", {
-        name: "new son button"
+        name: "new son button",
       });
       expect(newAddBtn).toBeVisible();
     });
